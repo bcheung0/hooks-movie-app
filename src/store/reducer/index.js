@@ -1,30 +1,14 @@
-export const initialState = {
-  loading: true,
-  movies: [],
-  errorMessage: null
-};
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './components/App'; // this changed
+import * as serviceWorker from './serviceWorker';
 
-export const reducer = (state, action) => {
-  switch (action.type) {
-    case "SEARCH_MOVIES_REQUEST":
-      return {
-        ...state,
-        loading: true,
-        errorMessage: null
-      };
-    case "SEARCH_MOVIES_SUCCESS":
-      return {
-        ...state,
-        loading: false,
-        movies: action.payload
-      };
-    case "SEARCH_MOVIES_FAILURE":
-      return {
-        ...state,
-        loading: false,
-        errorMessage: action.error
-      };
-    default:
-      return state;
-  }
-};
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+
+
