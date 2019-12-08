@@ -18,6 +18,7 @@ const Movie = ({ movie }) => {
         />
       </div>
       <p>({movie.Year})</p>
+      
     </div>
   );
 };
